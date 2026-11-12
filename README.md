@@ -5,6 +5,8 @@ Windows PowerShell 5.1+ script that renames selected files or folders to random 
 - File extensions and contents are preserved. 
 - Folder contents are not renamed.
 
+<img width="950" height="518" alt="_redact_filename_preview" src="https://github.com/user-attachments/assets/328affaf-fb04-44c1-802a-d767b40df852" />
+
 ## Installation
 
 Keep all scripts and `icon.ico` together in a permanent folder.
