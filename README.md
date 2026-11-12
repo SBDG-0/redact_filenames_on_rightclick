@@ -37,6 +37,8 @@ To remove / uninstall the context-menu entry:
 
 Renaming does not remove file metadata or redact file contents. </br> Original names are not saved for undo.
 
+The context menu uses `redact_filename.vbs` to launch PowerShell without a flashing window. On a rename error, the console opens with details. Keep the launcher beside the scripts and rerun the installer after updating.
+
 <br />
 
 ---
@@ -45,5 +47,3 @@ This software is provided "as is", without warranty of any kind.
 
 ---
 made with ❤️ by SavageBulldogOG
-
-The context menu uses `redact_filename.vbs` to launch PowerShell without a flashing window. On a rename error, the console opens with details. Keep the launcher beside the scripts and rerun the installer after updating.
