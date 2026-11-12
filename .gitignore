@@ -1,0 +1,10 @@
+# Local editor and temporary files
+.vscode/
+.idea/
+*.tmp
+*.bak
+*~
+Thumbs.db
+Desktop.ini
+.DS_Store
+/.images/
