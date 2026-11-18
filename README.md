@@ -1,49 +1,70 @@
-# Redact filenames on right-click
+# Redact Filenames on Right-Click
 
-Windows PowerShell 5.1+ script that renames selected files or folders to random 12-14 character names. Each name includes an uppercase letter, a lowercase letter, a number, and a symbol from `! $ % &`.
-- The context-menu PowerShell window stays hidden unless an error occurs; press any key to close it after an error.
-- File extensions and contents are preserved. 
-- Folder contents are not renamed.
+## Description
 
-<img width="950" height="518" alt="_redact_filename_preview" src="https://github.com/user-attachments/assets/328affaf-fb04-44c1-802a-d767b40df852" />
+**Redact Filenames on Right-Click** adds an **Anonymize name** command to the Windows context menu. It renames selected files or folders to random names of 12–14 characters, including an uppercase letter, a lowercase letter, a number, and a symbol from `! $ % &`.
+
+## Preview
+
+<img src="https://github.com/user-attachments/assets/328affaf-fb04-44c1-802a-d767b40df852" alt="Anonymize name context-menu preview" width="900" />
+
+## Features
+
+- Preserve file extensions and contents.
+- Rename a folder without renaming its contents.
+- Preview a rename with PowerShell's `-WhatIf` option.
+- Keep the context-menu PowerShell window hidden unless an error occurs.
+- Install for the current user without administrator access.
+
+## Requirements
+
+- Windows with PowerShell 5.1 or newer.
+- Keep all scripts and `icon.ico` together in a permanent folder.
 
 ## Installation
 
-Keep all scripts and `icon.ico` together in a permanent folder.
-
-Run in PowerShell:
+Open PowerShell in the folder containing the scripts and run:
 
 ```powershell
 & '.\redact add to right click menu.ps1'
 ```
 
-## How to use
-Right-click a file or folder and choose **Anonymize name** (Windows 11: **Show more options**).
+The installer adds the context-menu entry for the current user. Re-run it if you move the folder or update the launcher.
 
+## Usage
 
-Installation applies to the current user; administrator access is not required. </br> Re-run the installer if you move the folder.
-### Previewing
-Preview a rename without changing anything:
+Right-click a file or folder and choose **Anonymize name**. On Windows 11, open **Show more options** to find the command.
+
+The context menu uses `redact_filename.vbs` to launch PowerShell without a flashing window. Keep the launcher beside the scripts. If a rename fails, a console opens with the error details; press any key to close it.
+
+### Preview a rename
+
+Use `-WhatIf` to see the proposed rename without changing anything:
 
 ```powershell
 & '.\redact_filename.ps1' -LiteralPath 'C:\path\file.txt' -WhatIf
 ```
-## Uninstall
-To remove / uninstall the context-menu entry:
+
+## Uninstallation
+
+Run this command from the scripts folder to remove the context-menu entry:
 
 ```powershell
 & '.\redact remove from right click menu.ps1'
 ```
 
-Renaming does not remove file metadata or redact file contents. </br> Original names are not saved for undo.
+## Limitations
 
-The context menu uses `redact_filename.vbs` to launch PowerShell without a flashing window. On a rename error, the console opens with details. Keep the launcher beside the scripts and rerun the installer after updating.
-
-<br />
+Renaming does not remove file metadata or redact file contents. Original names are not saved for undo.
 
 ---
-This software is provided "as is", without warranty of any kind. 
-<br />  It is free to use, modify, and distribute. 
+
+## Reuse
+
+This software is provided "as is", without warranty of any kind. It is free to use, modify, and distribute provided you credit the author (SavageBulldog) and include a link back to the original repository.
+
+[Original repository](https://github.com/SBDG-0/_redact_filenames_on_rightclick_ps)
 
 ---
+
 made with ❤️ by SavageBulldogOG
