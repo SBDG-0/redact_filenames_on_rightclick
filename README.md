@@ -19,6 +19,7 @@
 ## Requirements
 
 - Windows with PowerShell 5.1 or newer.
+- Windows Script Host with VBScript support for the hidden menu launcher.
 - Keep all scripts and `icon.ico` together in a permanent folder.
 
 ## Installation
@@ -61,9 +62,9 @@ Renaming does not remove file metadata or redact file contents. Original names a
 
 ## Reuse
 
-This software is provided "as is", without warranty of any kind. It is free to use, modify, and distribute provided you credit the author (SavageBulldog) and include a link back to the original repository.
+This software is provided “as is”, without warranty of any kind. You may use, modify, and distribute it, provided you credit SavageBulldogOG and include a link to this repository.
 
-[Original repository](https://github.com/SBDG-0/_redact_filenames_on_rightclick_ps)
+[redact_filenames_on_rightclick](https://github.com/SBDG-0/redact_filenames_on_rightclick)
 
 ---
 

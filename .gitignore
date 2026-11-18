@@ -8,3 +8,20 @@ Thumbs.db
 Desktop.ini
 .DS_Store
 /.images/
+
+# BEGIN local Codex files
+# Keep assistant guidance/configuration and local working backups off Git.
+[Aa][Gg][Ee][Nn][Tt][Ss].[Mm][Dd]
+[Aa][Gg][Ee][Nn][Tt][Ss].override.[Mm][Dd]
+[Aa][Gg][Ee][Nn][Tt][Ss].[Mm][Dd].*
+[Aa][Gg][Ee][Nn][Tt].[Mm][Dd]
+[Aa][Gg][Ee][Nn][Tt].override.[Mm][Dd]
+[Aa][Gg][Ee][Nn][Tt].[Mm][Dd].*
+.codex
+.codex-stalker
+.agents/
+.skills/
+.expertise/
+.local-backups/
+.readme-backups/
+# END local Codex files
