@@ -20,7 +20,7 @@
 
 - Windows with PowerShell 5.1 or newer.
 - Windows Script Host with VBScript support for the hidden menu launcher.
-- Keep all scripts and `icon.ico` together in a permanent folder.
+- Keep all scripts and `redact.ico` together in a permanent folder.
 
 ## Installation
 

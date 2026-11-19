@@ -6,8 +6,8 @@ $ErrorActionPreference = 'Stop'
 try {
     $target = Join-Path $PSScriptRoot 'redact_filename.vbs'
     if (-not (Test-Path -LiteralPath $target -PathType Leaf)) { throw "Missing script: $target" }
-    $iconPath = Join-Path $PSScriptRoot 'icon.ico'
-    if (-not (Test-Path -LiteralPath $iconPath -PathType Leaf)) { throw "Missing icon: $iconPath. Place icon.ico beside the scripts before installing." }
+    $iconPath = Join-Path $PSScriptRoot 'redact.ico'
+    if (-not (Test-Path -LiteralPath $iconPath -PathType Leaf)) { throw "Missing icon: $iconPath. Place redact.ico beside the scripts before installing." }
     $engine = Join-Path $env:SystemRoot 'System32\wscript.exe'
     if (-not (Test-Path -LiteralPath $engine -PathType Leaf)) { throw 'Windows Script Host was not found.' }
     # AllFilesystemObjects covers files, folders and mixed selections, without duplicate entries.
@@ -18,7 +18,7 @@ try {
         try {
             $key.SetValue('', 'Anonymize name')
             $key.SetValue('MultiSelectModel', 'Document')
-            $key.SetValue('Icon', ('"{0}",0' -f $iconPath))
+            $key.SetValue('Icon', $iconPath, [Microsoft.Win32.RegistryValueKind]::String)
             $commandKey = $key.CreateSubKey('command')
             try { $commandKey.SetValue('', $command) } finally { $commandKey.Dispose() }
         }
